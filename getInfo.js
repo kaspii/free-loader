@@ -3,6 +3,8 @@
     FB.init({
       appId      : '341086482753224',
       xfbml      : true,
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
       version    : 'v2.2'
     });
   };
@@ -14,13 +16,12 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-/*
-  window.fbAsyncInit = function() {
+
+/*  window.fbAsyncInit = function() {
     FB.init({
       appId      : '113455642165175', // App ID
       channelUrl : 'http://hayageek.com/examples/oauth/facebook/oauth-javascript/channel.html', // Channel File
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
+     
       xfbml      : true  // parse XFBML
     });
     
@@ -46,7 +47,7 @@
     }
 	});	
 	
-    };
+   // };
     
    	function Login()
 	{
