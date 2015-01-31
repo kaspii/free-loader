@@ -22,7 +22,7 @@ for(var i = 0; i < text.length; i++) {
 		if(j==4)
 		{
 			console.log("FOUND IT");
-			indicator=true;
+			indicator.value=true;
 		}
 	}
 }}
