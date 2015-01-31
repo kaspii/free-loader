@@ -16,11 +16,11 @@ function getUserInfo()
 
 function getFeed()
 {
-	//for(var a=0; a<openGroups.length;a++)
-	//{
-//	id=openGroups[a];
-//	FB.api('/'+id+'/?fields=feed', function(response) 
-FB.api('/269730429771312/?fields=feed', function(response)
+	for(var a=0; a<openGroups.length;a++)
+	{
+	id=openGroups[a];
+	FB.api('/'+id+'/?fields=feed', function(response) 
+//FB.api('/269730429771312/?fields=feed', function(response)
 	{
 		var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE
 		var str="";
@@ -47,7 +47,7 @@ FB.api('/269730429771312/?fields=feed', function(response)
 	
 	
 	});
-//	}
+	}
 	
 }
 ///////////////////////////////////////////////////
