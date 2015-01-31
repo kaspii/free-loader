@@ -18,6 +18,7 @@ function getFeed(id)
 {
 	FB.api('/'+id+'/?fields=feed', function(response) 
 	{
+		var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE
 		var str="";
 		for(var i=0; i<3; i++)
 		{
@@ -27,6 +28,8 @@ function getFeed(id)
 			{
 				parse(indicator,response.feed.data[i].message,wordMusthave[j]);
 			}
+			
+			parse(indicator,response.feed.data[i].message,wordOpt);
 			if(indicator.value==true)
 				{
 					str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
