@@ -90,7 +90,7 @@ window.fbAsyncInit = function()
 	  {
 		  str+="<br/>Groups: " + response.data[i].name + "<br>";
 	  }	  	    
-	  document.getElementById("status").innerHTML=str;
+	  document.getElementById("status").innerHTML+=str;
     });
 	
 	}
