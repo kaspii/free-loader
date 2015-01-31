@@ -13,7 +13,9 @@ for(var i = 0; i < text.length; i++) {
 		while(j<word.length)
 		{
 			if(text[i]==word[j])
-			i++;j++;
+			{
+				i++;j++;
+			}
 			else
 			break;
 		}
