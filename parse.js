@@ -20,7 +20,7 @@ for(var i = 0; i < text.length; i++) {
 			else
 			break;
 		}
-		if(j==4)
+		if(j==word.length)
 		{
 			console.log("FOUND IT");
 			indicator.value=true;
