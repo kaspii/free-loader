@@ -39,87 +39,79 @@ function Login()
   			{
   	    	 		console.log('User cancelled login or did not fully authorize.');
    			}
-		 },{scope: permission});
-	}
-
-	  function getPermissions() {
-	    FB.api('/me/permissions', function(response) {
-
+	},{scope: permission});
+}
+//////////////////////////////////////////////////
+function Logout()
+{
+	FB.logout(function(){document.location.reload();});
+}
+///////////////////////////////////////////////////
+/*
+function getPermissions() 
+{
+	FB.api('/me/permissions', function(response) {
 			console.log(response);
 	  	  	    
     });
-    }
-  function getUserInfo() {
-	    FB.api('/me', function(response) {
-
-	  var str="<b>Name</b> : "+response.name+"<br>";
-	  	  //str +="<b>Link: </b>"+response.link+"<br>";
-	  	  //str +="<b>id: </b>"+response.id+"<br>";
-	  	  //str +="<b>Email:</b> "+response.email+"<br>";
-	  	  //str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
-	  	  str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
-	  	  str +="<input type='button' value='Get Events' onclick='getEvents();'/>";
-	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
-	  	  document.getElementById("status").innerHTML=str;
-	  
-	 getPhoto();	  
-	  	  	    
-    });
-    }
-    
-    ///////////////
-    	function getGroups()
+}*/
+function getUserInfo() 
+{
+	FB.api('/me', function(response) 
 	{
-	  FB.api('me/groups', function(response) {
-	  var str;
-	  for (var i = 0; i < response.data.length; i++) 
-	  {
-		  str+="<br/>Groups: " + response.data[i].name + "<br>";
-	  }	  	    
-	  document.getElementById("status").innerHTML+=str;
-    });
-	
-	}
-	
-	function getEvents()
+		var str="<b>Name</b> : "+response.name+"<br>";
+	  	//str +="<b>Link: </b>"+response.link+"<br>";
+	  	//str +="<b>id: </b>"+response.id+"<br>";
+	  	//str +="<b>Email:</b> "+response.email+"<br>";
+	  	//str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
+	  	str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
+	  	str +="<input type='button' value='Get Events' onclick='getEvents();'/>";
+	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
+	  	document.getElementById("status").innerHTML=str;
+	 	getPhoto();	 
+    	});
+}
+////////////////////////////////////////////////
+function getGroups()
+{
+	FB.api('me/groups', function(response)
 	{
-	  FB.api('me/events', function(response) {
-	  var str;
-	  for (var i = 0; i < response.data.length; i++) 
-	  {
-		  str+="<br/>Events: " + response.data[i].name + "<br>";
-	  }	  	    
-	  document.getElementById("status").innerHTML+=str;
-    });
-	
-	}
-    ///////////////////////////
-	function getPhoto()
+		var str;
+		for (var i = 0; i < response.data.length; i++) 
+		{
+			str+="<br/>Groups: " + response.data[i].name + "<br>";
+		}	  	    
+	document.getElementById("status").innerHTML+=str;
+    	});
+}
+/////////////////////////////////////////////////	
+function getEvents()
+{
+	FB.api('me/events', function(response) 
 	{
-	  FB.api('/me/picture?type=normal', function(response) {
-
+		var str;
+		for (var i = 0; i < response.data.length; i++) 
+		{
+			str+="<br/>Events: " + response.data[i].name + "<br>";
+		}	  	    
+		document.getElementById("status").innerHTML+=str;
+	});
+}
+///////////////////////////////////////////////////
+function getPhoto()
+{
+	FB.api('/me/picture?type=normal', function(response) 
+	{
 		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
 	  	  document.getElementById("status").innerHTML+=str;
-	  	  	    
-    });
-	
-	}
-	
-	
-	/////////////////
-	function Logout()
-	{
-		FB.logout(function(){document.location.reload();});
-	}
-
-  // Load the SDK asynchronously
-  
-  
+    	});
+}
+/////I don't know what it is. Load the SDK asynchronously
  (function(d){
      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement('script'); js.id = id; js.async = true;
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
-   }(document));
+ }(document));
 
