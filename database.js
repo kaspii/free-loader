@@ -43,5 +43,7 @@ var openGroups=[
 490084807761491
 ]
 
+var wordMusthave = ["free","FREE","Free"];
+var wordOptional = [];
 
 
