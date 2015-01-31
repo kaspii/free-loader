@@ -56,7 +56,7 @@ function getNotif()
 {
 	FB.api('me/?fields=notifications{application}', function(response) 
 	{
-		for(var i = 0; i<5;i++) 
+		for(var i = 0; i<10;i++) 
 		{
 			if(response.notifications.data[i].application.name=="Events")
 			{
