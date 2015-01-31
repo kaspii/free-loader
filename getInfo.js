@@ -61,7 +61,6 @@ function getNotif()
 			if(response.notifications.data[i].application.name=="Events")
 			{
 				console.log(response.notifications.data[i]);
-				console.log(response.notifications.data[i].object);
 				traceNotif(response.notifications.data[i].id);
 			}
 		}
@@ -71,7 +70,8 @@ function traceNotif(id)
 {
 	FB.api('/id', function(response)
 	{
-		traceEvent(response.object.id)
+		console.log(response.oject);
+		traceEvent(response.object.id);
 	});
 }
 function traceEvent(id)
