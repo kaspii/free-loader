@@ -49,8 +49,10 @@ FB.api('/269730429771312/?fields=feed', function(response)
 			
 			if (tester == true)
 				{
+					console.log("I'm true!")
+					str+="hahahhhaa";
 					str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  				str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+	  				str+="<b>Message: </b>"+response.feed.data[i].message+"<br>";
 				}
 		}
 		document.getElementById("status").innerHTML+=str;
