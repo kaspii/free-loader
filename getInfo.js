@@ -60,7 +60,7 @@ window.fbAsyncInit = function()
 	  	  //str += "<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
 	  	  str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
-	  	  document.getElementById("status").innerHTML+=str;
+	  	  document.getElementById("status").innerHTML=str;
 	  
 	  getPhoto();	  
 	  	  	    
