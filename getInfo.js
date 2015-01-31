@@ -1,3 +1,4 @@
+//Apple ID login
 window.fbAsyncInit = function() 
 {
     FB.init({
@@ -8,7 +9,7 @@ window.fbAsyncInit = function()
       version    : 'v2.2'
     });
 };
-
+//don't know what this does but don't touch it
 (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -17,44 +18,28 @@ window.fbAsyncInit = function()
      fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-/*FB.Event.subscribe('auth.authResponseChange', function(response) 
+//login
+var permission = "email,read_friendlists,user_status,user_likes,user_relationships,user_about_me,user_birthday,friends_status,read_stream,manage_notifications,publish_actions,user_groups,user_events";
+function Login()
 {
-	if (response.status === 'connected') 
-  	{
-  		document.getElementById("message").innerHTML +=  "<br>Connected to Facebook"; //SUCCESS
-  	}	 
-	else if (response.status === 'not_authorized') 
+	FB.login(function(response) 
 	{
-    		document.getElementById("message").innerHTML +=  "<br>Failed to Connect"; //FAILED
-    	}
-    	else 
-    	{
-    		document.getElementById("message").innerHTML +=  "<br>Logged Out";
-    	}
-});*/	
-    
-   function Login()
-	{
-	
-		FB.login(function(response) {
-		   if (response.authResponse) 
-		   {
-		   	
+		if (response.authResponse) 
+		{
 		   	var access_token = FB.getAuthResponse()['accessToken'];
-		   	
-		   	console.log('Access Token = '+ access_token);
-		   	FB.api('/me', function(response){
+		   	//console.log('Access Token = '+ access_token);
+		   	FB.api('/me', function(response)
+		   	{
 		   		console.log('Good to see you, '+ response.name+ '.');
 		   	});
 		    	getUserInfo();
 		    	getPermissions();
-  			} else 
+  			}
+  			else 
   			{
-  	    	 console.log('User cancelled login or did not fully authorize.');
+  	    	 		console.log('User cancelled login or did not fully authorize.');
    			}
-		 },{scope: "email,read_friendlists,user_status,user_likes,user_relationships,user_about_me,user_birthday,friends_status,read_stream,manage_notifications,publish_actions,user_groups,user_events"});
-	
-	
+		 },{scope: permission});
 	}
 
 	  function getPermissions() {
