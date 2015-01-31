@@ -1,8 +1,8 @@
 var openGroups=[
 //Free and For Sale
-267375200006835,
+//267375200006835,
 //UCLA Free and For Sale
-761559070588443,
+//761559070588443,
 //Sports and Athletics
 267375176673504,
 //Daily Bruin Open
