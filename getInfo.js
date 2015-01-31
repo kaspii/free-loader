@@ -70,7 +70,7 @@ FB.Event.subscribe('auth.authResponseChange', function(response)
 	  FB.api('/me/groups', function(response) {
 
 		  var str="<br/><b>Groups:</b>" + response.data + "<br>";
-	  	  document.getElementById("status").innerHTML+=str;
+	  	  document.getElementById("status").innerHTML=str;
 	  	  	    
     });
 	
