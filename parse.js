@@ -25,5 +25,9 @@ for(var i = 0; i < text.length; i++) {
 			console.log("FOUND IT");
 			indicator.value=true;
 		}
+		else
+		{
+			indicator.value=false;
+		}
 	}
 }}
