@@ -45,6 +45,20 @@ span {
 	border: 4px solid #fff;
 }
 
+div.layout
+{
+  text-align: center;
+}
+
+div.centre
+{
+  text-align: left;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .no-touch .cbp-fbscroller > nav a:hover {
 	background: rgba(255,255,255,0.6);
 }
