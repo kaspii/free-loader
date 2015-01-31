@@ -1,7 +1,8 @@
 
 //var indicator = false;
-function parse(indicator, text){
-var word = "free";
+
+function parse(indicator, text, word){
+
 
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
