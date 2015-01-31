@@ -10,8 +10,12 @@
   display: inline;
 }
 
+.head h1
+{
+  text-align: center;
+}
+
 h1
 {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
 }
