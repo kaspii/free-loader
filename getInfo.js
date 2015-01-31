@@ -10,6 +10,7 @@ function getUserInfo()
 	  	//str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
 	  	str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
 	  	str +="<input type='button' value='Get Events' onclick='getEvents();'/>";
+	  	str +="<input type='button' value='Get Notification' onclick='getNotif();'/>";
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	document.getElementById("status").innerHTML=str;
 	 	getPhoto();	 
@@ -49,6 +50,31 @@ function getPhoto()
 		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
 	  	  document.getElementById("status").innerHTML+=str;
     	});
+}
+//////////////////////////////////////////////////
+function getNotif()
+{
+	FB.api('me/?fields=notifications{application}', function(response) 
+	{
+		for (var i = 0; i < 5; i++) 
+		{
+			if(response.notification.data[i].application.name=="Events")
+			{
+				traceEvent(response.notification.data[i].object.id);
+			}
+		}
+	  	  
+    	});
+	
+}
+function traceEvent(id)
+{
+	FB.api('/id', function(response)
+	{
+		var str="<b>Name</b> : "+response.name+"<br>";
+	  	str +="<b>Description: </b>"+response.description+"<br>";
+		document.getElementById("status").innerHTML+=str;
+	});
 }
 /////I don't know what it is. Load the SDK asynchronously
  (function(d){
