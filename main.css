@@ -15,8 +15,8 @@
   background-image: url("http://www.awwwards.com/awards/images/2013/11/wall-Nojesguiden-illustration-3.jpg");
 } */
 
-html { 
-  background: url("http://upload.wikimedia.org/wikipedia/commons/3/3e/Oreo-Two-Cookies.jpg") no-repeat center center fixed; 
+body { 
+  background: url("http://www.awwwards.com/awards/images/2013/11/wall-Nojesguiden-illustration-3.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
