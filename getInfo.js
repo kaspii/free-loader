@@ -20,7 +20,8 @@ function getFeed(id)
 	{
 		for(var i=0; i<3; i++)
 		{
-			var str="<b>Group Name</b> : "+response.feed.data[i].to.data.name+"<br>";
+		//	console.log(response.feed.data[i].to)
+			var str="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
 	  		str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
 		}
 		document.getElementById("status").innerHTML+=str;
