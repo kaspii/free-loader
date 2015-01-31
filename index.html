@@ -26,6 +26,7 @@
   data-width="450"
   data-show-faces="true">
 </div>
+
 <?php
 $posts = json_decode(
     file_get_contents('https://graph.facebook.com/swagbucks/posts')
@@ -34,6 +35,7 @@ foreach($posts->data as $post) {
     echo $post->message, PHP_EOL;
 }
 ?>
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -51,7 +53,7 @@ foreach($posts->data as $post) {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<script src="getInfo.js"></script>
+<!--<script src="getInfo.js"></script>-->
 </body>
 
 </html>
