@@ -70,9 +70,9 @@ window.fbAsyncInit = function()
 	  FB.api('/me/groups', function(response) {
 	  var str;
 	  console.log("hi");
-	  console.log("response.data");
-	  console.log("response.data.length");
-	  console.log("response.data[1].name");
+	  console.log(response.data);
+	  console.log(response.data.length);
+	  console.log(response.data[1].name);
 	  for (var i = 0; i < response.data.length; i++) 
 	  {
 		  str+="<br/>Groups: " + response.data[i].name + "<br>";
