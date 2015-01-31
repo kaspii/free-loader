@@ -28,14 +28,14 @@
   data-show-faces="true">
 </div>
 
-<?php
+<!--php
 $posts = json_decode(
     file_get_contents('https://graph.facebook.com/swagbucks/posts')
 );
 foreach($posts->data as $post) {
     echo $post->message, PHP_EOL;
 }
-?>
+?> -->
 
 <script>
   window.fbAsyncInit = function() {
