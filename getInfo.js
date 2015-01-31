@@ -21,8 +21,9 @@ function getFeed(id)
 		var str="";
 		for(var i=0; i<3; i++)
 		{
+			var indicator;
 			parse(indicator,response.feed.data[i].message);
-			if(indicator)
+			if(indicator==true)
 			{
 				str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
 	  			str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
