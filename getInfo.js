@@ -58,6 +58,7 @@ function Login()
 	  	  //str +="<b>Email:</b> "+response.email+"<br>";
 	  	  //str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
 	  	  str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
+	  	  str +="<input type='button' value='Get Events' onclick='getEvents();'/>";
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	  document.getElementById("status").innerHTML=str;
 	  
