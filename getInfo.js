@@ -56,12 +56,14 @@ function getNotif()
 {
 	FB.api('me/?fields=notifications{application}', function(response) 
 	{
-		for (var i = 0; i < 5; i++) 
+		var i=0;
+		while( i < 5) 
 		{
 			if(response.notifications.data[i].application.name=="Events")
 			{
 				console.log(response.notifications.data[i]);
 				traceNotif(response.notifications.data[i].id);
+				i++;
 			}
 		}
     	});
