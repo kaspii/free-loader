@@ -62,7 +62,7 @@ function Login()
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	  document.getElementById("status").innerHTML=str;
 	  
-	  getPhoto();	  
+	  //getPhoto();	  
 	  	  	    
     });
     }
