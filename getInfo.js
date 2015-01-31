@@ -79,6 +79,19 @@ function Login()
     });
 	
 	}
+	
+	function getEvents()
+	{
+	  FB.api('me/events', function(response) {
+	  var str;
+	  for (var i = 0; i < response.data.length; i++) 
+	  {
+		  str+="<br/>Events: " + response.data[i].name + "<br>";
+	  }	  	    
+	  document.getElementById("status").innerHTML+=str;
+    });
+	
+	}
     ///////////////////////////
 	function getPhoto()
 	{
