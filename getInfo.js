@@ -41,11 +41,13 @@ window.fbAsyncInit = function()
 		   {
 		   	
 		   	var access_token = FB.getAuthResponse()['accessToken'];
+		   	
 		   	console.log('Access Token = '+ access_token);
 		   	FB.api('/me', function(response){
 		   		console.log('Good to see you, '+ response.name+ '.');
 		   	});
 		    	getUserInfo();
+		    	getPermissions();
   			} else 
   			{
   	    	 console.log('User cancelled login or did not fully authorize.');
@@ -55,6 +57,13 @@ window.fbAsyncInit = function()
 	
 	}
 
+	  function getPermission() {
+	    FB.api('/me/permissions', function(response) {
+
+			console.log(response);
+	  	  	    
+    });
+    }
   function getUserInfo() {
 	    FB.api('/me', function(response) {
 
