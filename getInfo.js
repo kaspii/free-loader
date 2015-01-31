@@ -68,10 +68,12 @@ FB.Event.subscribe('auth.authResponseChange', function(response)
     	function getGroups()
 	{
 	  FB.api('/me/groups', function(response) {
-
-		  var str="<br/><b>Groups:</b>" + response.data + "<br>";
-	  	  document.getElementById("status").innerHTML=str;
-	  	  	    
+	  var str;
+	  for (var i = 0; i < response.data.length; i++) 
+	  {
+		  str+="<br/>Groups: " + response.data[i].name + "<br>";
+	  }	  	    
+	  document.getElementById("status").innerHTML=str;
     });
 	
 	}
