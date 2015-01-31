@@ -23,12 +23,15 @@ function getFeed(id)
 		{
 		//	var indicator = false;
 			var indicator = {value : false};
-			parse(indicator,response.feed.data[i].message);
-			if(indicator.value==true)
+			for(var j=0; j<3;j++)
 			{
-				str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  			str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+				parse(indicator,response.feed.data[i].message,wordMusthave[j]);
 			}
+			if(indicator.value==true)
+				{
+					str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
+	  				str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+				}
 		}
 		document.getElementById("status").innerHTML+=str;
 	});
