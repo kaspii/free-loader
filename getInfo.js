@@ -17,15 +17,6 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-/*  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '113455642165175', // App ID
-      channelUrl : 'http://hayageek.com/examples/oauth/facebook/oauth-javascript/channel.html', // Channel File
-     
-      xfbml      : true  // parse XFBML
-    });
-    
-    */
 	FB.Event.subscribe('auth.authResponseChange', function(response) 
 	{
  	 if (response.status === 'connected') 
