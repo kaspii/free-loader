@@ -22,8 +22,12 @@ function getFeed(id)
 		for(var i=0; i<3; i++)
 		{
 		//	console.log(response.feed.data[i].to)
-			str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  		str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+			parse(indicator,response.feed.data[i].message);
+			if(indicator)
+			{
+				str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
+	  			str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+			}
 		}
 		document.getElementById("status").innerHTML+=str;
 	});
