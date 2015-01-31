@@ -113,9 +113,18 @@ function traceNotif(id)
 function traceEvent(id)
 {
 	FB.api('/'+id+'', function(response)
-	{
+	{	var indicatorMust = {value: false};
+		var indicatorOpt = {value: false};
+		for (var j=; j<3; j++)
+		{
+			parse(indicatorMust, response.description, wordMusthave[j]);
+		}
+		parse(indicatorOpt, response.description, wordOpt);
+		if(indicatorMust.value == true && indicatorOpt.value== true)
+		{
 		var str="<b>Name</b> : "+response.name+"<br>";
-	  	str +="<b>Description: </b>"+response.description+"<br>";
+	  	str +="<b>Description: </b>"+response.description+"<br>";	
+		}
 		document.getElementById("status").innerHTML+=str;
 	});
 }
