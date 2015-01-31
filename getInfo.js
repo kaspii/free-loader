@@ -57,7 +57,7 @@ window.fbAsyncInit = function()
 	
 	}
 
-	  function getPermission() {
+	  function getPermissions() {
 	    FB.api('/me/permissions', function(response) {
 
 			console.log(response);
