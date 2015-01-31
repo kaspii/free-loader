@@ -23,7 +23,7 @@ function getFeed()
 	{
 		var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE
 		var str="";
-		for(var i=0; i<3; i++)
+		for(var i=0; i<10; i++)
 		{
 		//	var indicator = false;
 			var indicatorMust = {value : false};
