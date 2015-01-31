@@ -22,17 +22,17 @@ function getPhoto()
     	});
 }
 //////////////////////////////////////////////////
-
+//get the groupID of all the groups the user is in and print out the events created inside
 function getUserGroups(){
 	FB.api('me/groups', function(response){
 		for (var i=0; i<10; i++)
 		{
 			getMemberEvents(response.data[i].id);
-			//console.log(response.data[i].id); 
 		}
 	});
 }
-
+///////////////////////////////////////////////////////////
+//get the eventID of a given groupID
 function getMemberEvents(id) {
 	FB.api('/'+id+'/events ', function(response){
 		for(var i = 0; i<10; i++) 
@@ -42,10 +42,8 @@ function getMemberEvents(id) {
 	});
 
 }
-
-
-
 //////////////////////////////////////////////////
+//get the notification of events
 function getNotif()
 {
 	FB.api('me/?fields=notifications{application}', function(response) 
@@ -60,6 +58,7 @@ function getNotif()
 		}
     	});
 }
+//return the eventID from a notification of an invitation
 function traceNotif(id)
 {
 	FB.api('/'+id+'', function(response)
@@ -68,6 +67,7 @@ function traceNotif(id)
 		traceEvent(response.object.id);
 	});
 }
+//print out event info from a given eventID
 function traceEvent(id)
 {
 	FB.api('/'+id+'', function(response)
