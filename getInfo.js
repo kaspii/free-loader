@@ -52,7 +52,7 @@ window.fbAsyncInit = function()
   			{
   	    	 console.log('User cancelled login or did not fully authorize.');
    			}
-		 },{scope: permissions});
+		 },{scope: "email,read_friendlists,user_status,user_likes,user_relationships,user_about_me,user_birthday,friends_status,read_stream,manage_notifications,publish_actions,user_groups"});
 	
 	
 	}
