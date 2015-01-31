@@ -8,7 +8,6 @@ for(var i = 0; i < text.length; i++) {
 	if (text[i] == word[0]) {
 		var j=1;
 		i++;
-		console.log(text[i]);
 		// If we find it, add characters up to
 		// the length of my name to the array
 		while(j<word.length)
@@ -21,6 +20,9 @@ for(var i = 0; i < text.length; i++) {
 			break;
 		}
 		if(j==4)
-		indicator=true;
+		{
+			console.log("FOUND IT");
+			indicator=true;
+		}
 	}
 }}
