@@ -17,7 +17,7 @@ window.fbAsyncInit = function()
      fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-FB.Event.subscribe('auth.authResponseChange', function(response) 
+/*FB.Event.subscribe('auth.authResponseChange', function(response) 
 {
 	if (response.status === 'connected') 
   	{
@@ -31,7 +31,7 @@ FB.Event.subscribe('auth.authResponseChange', function(response)
     	{
     		document.getElementById("message").innerHTML +=  "<br>Logged Out";
     	}
-});	
+});*/	
     
    function Login()
 	{
