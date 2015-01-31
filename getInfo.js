@@ -11,8 +11,7 @@ function getUserInfo()
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	document.getElementById("status").innerHTML=str;
 	 	getPhoto();	 
-	 	<form onsubmit = "button.disabled = true; return true;">
-	 	</form>
+	 	
     	});
 }
 //prints out messages given a groupID
