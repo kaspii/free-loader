@@ -68,7 +68,7 @@ function getNotif()
 }
 function traceNotif(id)
 {
-	FB.api('/id', function(response)
+	FB.api('/'+id+'', function(response)
 	{
 		console.log(response);
 		traceEvent(response.object.id);
@@ -76,7 +76,7 @@ function traceNotif(id)
 }
 function traceEvent(id)
 {
-	FB.api('/id', function(response)
+	FB.api('/'+id+'', function(response)
 	{
 		var str="<b>Name</b> : "+response.name+"<br>";
 	  	str +="<b>Description: </b>"+response.description+"<br>";
