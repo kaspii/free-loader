@@ -64,11 +64,25 @@
 	  	  str +="<b>id: </b>"+response.id+"<br>";
 	  	  str +="<b>Email:</b> "+response.email+"<br>";
 	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
+	  	  str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	  document.getElementById("status").innerHTML=str;
 	  	  	    
     });
     }
+    
+    ///////////////
+    	function getGroups()
+	{
+	  FB.api('/me/groups', function(response) {
+
+		  var str="<br/><b>Groups:</b>" + response.data + "<br>";
+	  	  document.getElementById("status").innerHTML+=str;
+	  	  	    
+    });
+	
+	}
+    ///////////////////////////
 	function getPhoto()
 	{
 	  FB.api('/me/picture?type=normal', function(response) {
@@ -79,6 +93,9 @@
     });
 	
 	}
+	
+	
+	/////////////////
 	function Logout()
 	{
 		FB.logout(function(){document.location.reload();});
