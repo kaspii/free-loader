@@ -52,12 +52,6 @@ window.fbAsyncInit = function()
   function getUserInfo() {
 	    FB.api('/me', function(response) {
  	  
- 	  FB.api('/me/picture?type=normal', function(response) {
-
-		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
-	  	  document.getElementById("status").innerHTML+=str;
-	  	  	    
-          });
 	  var str="<b>Name</b> : "+response.name+"<br>";
 	  	  //str +="<b>Link: </b>"+response.link+"<br>";
 	  	  //str +="<b>id: </b>"+response.id+"<br>";
@@ -68,7 +62,7 @@ window.fbAsyncInit = function()
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	  document.getElementById("status").innerHTML+=str;
 	  
-	  //getPhoto();	  
+	  getPhoto();	  
 	  	  	    
     });
     }
