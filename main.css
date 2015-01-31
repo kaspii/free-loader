@@ -10,12 +10,12 @@
   display: inline;
 }
 
-.head h1
-{
-  text-align: center;
-}
-
-/*h1
+/*.head h1
 {
   text-align: center;
 }*/
+
+h1
+{
+  text-align: center;
+}
