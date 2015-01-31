@@ -62,12 +62,17 @@ function getNotif()
 			{
 				console.log(response.notifications.data[i]);
 				console.log(response.notifications.data[i].object);
-				traceEvent(response.notifications.data[i].object.id);
+				traceNotif(response.notifications.data[i].id);
 			}
 		}
-	  	  
     	});
-	
+}
+function traceNotif(id)
+{
+	FB.api('/id', function(response)
+	{
+		traceEvent(response.object.id)
+	});
 }
 function traceEvent(id)
 {
