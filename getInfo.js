@@ -37,11 +37,12 @@ FB.api('/269730429771312/?fields=feed', function(response)
 	
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
-				str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  			str+="<b>Message: </b>"+response.feed.data[i].message+"<br>";
-	  			//document.getElementById("status").innerHTML+=str;
+				var str="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
+	  			document.getElementById("status").innerHTML+=str;
+	  			var str="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+	  			document.getElementById("status").innerHTML+=str;
 			}
-				document.getElementById("status").innerHTML+=str;
+				//document.getElementById("status").innerHTML+=str;
 		}
 	
 	
