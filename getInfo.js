@@ -113,7 +113,8 @@ function traceNotif(id)
 function traceEvent(id)
 {
 	FB.api('/'+id+'', function(response)
-	{	var indicatorMust = {value: false};
+	{	var str = "";
+		var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
 		for (var j=0; j<3; j++)
 		{
@@ -122,7 +123,7 @@ function traceEvent(id)
 		parse(indicatorOpt, response.description, wordOpt);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
 		{
-		var str="<b>Name</b> : "+response.name+"<br>";
+		str+="<b>Name</b> : "+response.name+"<br>";
 	  	str +="<b>Description: </b>"+response.description+"<br>";	
 		}
 		document.getElementById("status").innerHTML+=str;
