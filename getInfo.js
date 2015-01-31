@@ -32,11 +32,13 @@ FB.api('/269730429771312/?fields=feed', function(response)
 			for(var j=0; j<3;j++)
 			{
 				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
-				console.log("must:" indicatorMust);
+				console.log("must"); 
+				console.log(indicatorMust);
 			}
 			
 			parse(indicatorOpt,response.feed.data[i].message,wordOpt);
-			console.log("opt:" indicatorOpt);
+				console.log("Opt"); 
+			console.log(indicatorOpt);
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 				{
 					str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
