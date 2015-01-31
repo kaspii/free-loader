@@ -32,9 +32,9 @@ FB.api('/269730429771312/?fields=feed', function(response)
 			for(var j=0; j<3;j++)
 			{
 				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
+			}
 				console.log("must"); 
 				console.log(indicatorMust);
-			}
 			
 			parse(indicatorOpt,response.feed.data[i].message,wordOpt);
 				console.log("Opt"); 
