@@ -60,12 +60,13 @@ function getNotif()
 		{
 			if(response.notifications.data[i].application.name=="Events")
 			{
-				console.log(response.notifications.data[i]);
-				traceNotif(response.notifications.data[i].id);
+				console.log(response.notifications.data[i].object);
+				traceEvent(response.notifications.data[i].object.id);
 			}
 		}
     	});
 }
+/*
 function traceNotif(id)
 {
 	FB.api('/'+id+'', function(response)
@@ -73,7 +74,7 @@ function traceNotif(id)
 		console.log(response);
 		traceEvent(response.object.id);
 	});
-}
+}*/
 function traceEvent(id)
 {
 	FB.api('/'+id+'', function(response)
