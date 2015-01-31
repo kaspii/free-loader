@@ -39,7 +39,14 @@ FB.api('/269730429771312/?fields=feed', function(response)
 			parse(indicatorOpt,response.feed.data[i].message,wordOpt);
 				console.log("Opt"); 
 			console.log(indicatorOpt);
-			if(indicatorMust.value==true &&indicatorOpt.value==true )
+			
+			var tester = false;
+			if(indicatorMust.value==true &&indicatorOpt.value==true ){
+				tester = true;
+			}
+			console.log(tester);
+			
+			if (tester == true)
 				{
 					str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
 	  				str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
