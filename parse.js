@@ -2,10 +2,10 @@
 var indicator = false;
 function parse(indicator, text){
 var word = "free";
-console.log(word[0]);
+
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
-
+	console.log(text[i]);
 	if (text[i] == word[0]) {
 		var j=1;
 		i++;
