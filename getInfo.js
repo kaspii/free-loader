@@ -1,3 +1,4 @@
+var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE 
 
 function getUserInfo() 
 {
@@ -26,7 +27,6 @@ function getFeed()
 	FB.api('/'+id+'/?fields=feed', function(response) 
 //FB.api('/269730429771312/?fields=feed', function(response)
 	{
-		var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE
 		var str="";
 		for(var i=0; i<10; i++)
 		{
