@@ -10,9 +10,10 @@ for(var i = 0; i < text.length; i++) {
 		i++;
 		// If we find it, add characters up to
 		// the length of my name to the array
-		for(i; i < (word.length + i); i++;j++) {
+		while(j<word.length)
+		{
 			if(text[i]==word[j])
-			;
+			i++;j++;
 			else
 			break;
 		}
