@@ -33,7 +33,7 @@ function Login()
 		   		console.log('Good to see you, '+ response.name+ '.');
 		   	});
 		    	getUserInfo();
-		    	getPermissions();
+		    	//getPermissions();
   			}
   			else 
   			{
