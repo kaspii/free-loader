@@ -6,12 +6,27 @@ function getUserInfo()
 		var str="<b>Name</b> : "+response.name+"<br>";
 	  	str +="<input type='button' value='Get Notification' onclick='getNotif();'/>";
 	  	str +="<input type='button' value='Get User Events' onclick='getUserGroups();'/>";
+	  	str +="<input type='button' value='Get Open Group Messages' onclick='getFeed(269730429771312);'/>";
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	document.getElementById("status").innerHTML=str;
 	 	getPhoto();	 
     	});
 }
+//prints out messages given a groupID
 
+function getFeed(id)
+{
+	FB.api('/'+id+'/?fields=feed', function(response) 
+	{
+		for(var i=0; i<3; i++)
+		{
+			var str="<b>Group Name</b> : "+response.feed.data[i].to.data.name+"<br>";
+	  		str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+		}
+		document.getElementById("status").innerHTML+=str;
+	});
+	
+}
 ///////////////////////////////////////////////////
 function getPhoto()
 {
