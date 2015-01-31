@@ -21,7 +21,7 @@ function getFeed(id)
 		var str="";
 		for(var i=0; i<3; i++)
 		{
-			var indicator;
+			var indicator = false;
 			parse(indicator,response.feed.data[i].message);
 			if(indicator==true)
 			{
