@@ -18,10 +18,11 @@ function getFeed(id)
 {
 	FB.api('/'+id+'/?fields=feed', function(response) 
 	{
+		var str;
 		for(var i=0; i<3; i++)
 		{
 		//	console.log(response.feed.data[i].to)
-			var str="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
+			str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
 	  		str +="<b>Message: </b>"+response.feed.data[i].message+"<br>";
 		}
 		document.getElementById("status").innerHTML+=str;
