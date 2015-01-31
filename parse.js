@@ -1,7 +1,7 @@
 
 var indicator = false;
 function parse(indicator, text){
-var word = "Free";
+var word = "free";
 var keyword = [];
 
 // Look for "F" in the text
