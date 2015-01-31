@@ -1,4 +1,4 @@
 # free-loader
 
-Temporary Website (using Vivian's UCLA host):
-http://niazhang.bol.ucla.edu/index.html
+On Github:
+http://kaspii.github.io/free-loader/
