@@ -44,6 +44,7 @@ FB.api('/269730429771312/?fields=feed', function(response)
 			if(indicatorMust.value==true &&indicatorOpt.value==true ){
 				tester = true;
 			}
+			console.log("tester");
 			console.log(tester);
 			
 			if (tester == true)
