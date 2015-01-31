@@ -60,6 +60,8 @@ function getNotif()
 		{
 			if(response.notifications.data[i].application.name=="Events")
 			{
+				consold.log(response.notifications.data[i]);
+				consold.log(response.notifications.data[i].object);
 				traceEvent(response.notifications.data[i].object.id);
 			}
 		}
