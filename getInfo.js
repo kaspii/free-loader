@@ -55,7 +55,7 @@ function getPhoto()
 //////////////////////////////////////////////////
 
 function getUserGroups(){
-	FB.api('/me', function(response){
+	FB.api('me/groups', function(response){
 		for (var i=0; i<response.data.length; i++)
 		{
 			getMemberEvents(response.date[i].id);
