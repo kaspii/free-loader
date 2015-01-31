@@ -18,7 +18,7 @@ function getFeed(id)
 {
 	FB.api('/'+id+'/?fields=feed', function(response) 
 	{
-		var str;
+		var str="";
 		for(var i=0; i<3; i++)
 		{
 		//	console.log(response.feed.data[i].to)
