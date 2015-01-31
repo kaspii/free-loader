@@ -115,7 +115,7 @@ function traceEvent(id)
 	FB.api('/'+id+'', function(response)
 	{	var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
-		for (var j=; j<3; j++)
+		for (var j=0; j<3; j++)
 		{
 			parse(indicatorMust, response.description, wordMusthave[j]);
 		}
