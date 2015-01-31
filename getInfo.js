@@ -58,9 +58,9 @@ function getNotif()
 	{
 		for (var i = 0; i < 5; i++) 
 		{
-			if(response.notification.data[i].application.name=="Events")
+			if(response.notifications.data[i].application.name=="Events")
 			{
-				traceEvent(response.notification.data[i].object.id);
+				traceEvent(response.notifications.data[i].object.id);
 			}
 		}
 	  	  
