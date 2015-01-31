@@ -16,10 +16,11 @@ function getUserInfo()
 
 function getFeed()
 {
-	for(var a=0; a<openGroups.length;a++)
-	{
-	id=openGroups[a];
-	FB.api('/'+id+'/?fields=feed', function(response) 
+	//for(var a=0; a<openGroups.length;a++)
+	//{
+//	id=openGroups[a];
+//	FB.api('/'+id+'/?fields=feed', function(response) 
+FB.api('/269730429771312/?fields=feed', function(response)
 	{
 		var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE
 		var str="";
@@ -31,9 +32,11 @@ function getFeed()
 			for(var j=0; j<3;j++)
 			{
 				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
+				console.log("must:" indicatorMust);
 			}
 			
 			parse(indicatorOpt,response.feed.data[i].message,wordOpt);
+			console.log("opt:" indicatorOpt);
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 				{
 					str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
@@ -43,7 +46,7 @@ function getFeed()
 		document.getElementById("status").innerHTML+=str;
 	
 	});
-	}
+//	}
 	
 }
 ///////////////////////////////////////////////////
