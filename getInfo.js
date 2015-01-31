@@ -56,17 +56,17 @@ function getPhoto()
 
 function getUserGroups(){
 	FB.api('me/groups', function(response){
-		for (var i=0; i<response.data.length; i++)
+		for (var i=0; i<10; i++)
 		{
 			getMemberEvents(response.data[i].id);
-			console.log(response.data[i].id); 
+			//console.log(response.data[i].id); 
 		}
 	});
 }
 
 function getMemberEvents(id) {
 	FB.api('/'+id+'/events ', function(response){
-		for(var i = 0; i<response.data.length; i++) 
+		for(var i = 0; i<10; i++) 
 		{
 			traceEvent(response.data[i].id);
 		}	
