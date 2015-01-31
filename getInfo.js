@@ -1,4 +1,4 @@
-//Apple ID login
+/*Apple ID login
 window.fbAsyncInit = function() 
 {
     FB.init({
@@ -47,7 +47,7 @@ function Logout()
 	FB.logout(function(){document.location.reload();});
 }
 ///////////////////////////////////////////////////
-/*
+
 function getPermissions() 
 {
 	FB.api('/me/permissions', function(response) {
