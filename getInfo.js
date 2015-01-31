@@ -4,8 +4,8 @@ function getUserInfo()
 	FB.api('/me', function(response) 
 	{
 		var str="<b>Name</b> : "+response.name+"<br>";
-	  	str +="<input type='button' value='Get Notification' onclick='getNotif();'/>";
-	  	str +="<input type='button' value='Get User Events' onclick='getUserGroups();'/>";
+	  	str +="<input type='button' value='Events for You' onclick='forYou();'/>";
+	  //	str +="<input type='button' value='Get User Events' onclick='getUserGroups();'/>";
 	  	str +="<input type='button' value='Events around UCLA' onclick='getFeed();'/>";
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	document.getElementById("status").innerHTML=str;
@@ -13,7 +13,11 @@ function getUserInfo()
     	});
 }
 //prints out messages given a groupID
-
+function forYou()
+{
+	getUserGroups();
+	getNotif();
+}
 function getFeed()
 {
 	for(var a=0; a<openGroups.length;a++)
