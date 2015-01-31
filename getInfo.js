@@ -17,25 +17,20 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-	FB.Event.subscribe('auth.authResponseChange', function(response) 
-	{
- 	 if (response.status === 'connected') 
+FB.Event.subscribe('auth.authResponseChange', function(response) 
+{
+	if (response.status === 'connected') 
   	{
-  		document.getElementById("message").innerHTML +=  "<br>Connected to Facebook";
-  		//SUCCESS
-  		
+  		document.getElementById("message").innerHTML +=  "<br>Connected to Facebook"; //SUCCESS
   	}	 
 	else if (response.status === 'not_authorized') 
-    {
-    	document.getElementById("message").innerHTML +=  "<br>Failed to Connect";
-
-		//FAILED
-    } else 
-    {
-    	document.getElementById("message").innerHTML +=  "<br>Logged Out";
-
-    	//UNKNOWN ERROR
-    }
+	{
+    		document.getElementById("message").innerHTML +=  "<br>Failed to Connect"; //FAILED
+    	}
+    	else 
+    	{
+    		document.getElementById("message").innerHTML +=  "<br>Logged Out";
+    	}
 	});	
 	
    // };
