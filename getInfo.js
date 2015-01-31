@@ -4,12 +4,6 @@ function getUserInfo()
 	FB.api('/me', function(response) 
 	{
 		var str="<b>Name</b> : "+response.name+"<br>";
-	  	//str +="<b>Link: </b>"+response.link+"<br>";
-	  	//str +="<b>id: </b>"+response.id+"<br>";
-	  	//str +="<b>Email:</b> "+response.email+"<br>";
-	  	//str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
-	  	str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
-	  	str +="<input type='button' value='Get Events' onclick='getEvents();'/>";
 	  	str +="<input type='button' value='Get Notification' onclick='getNotif();'/>";
 	  	str +="<input type='button' value='Get User Events' onclick='getUserGroups();'/>";
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
@@ -17,32 +11,7 @@ function getUserInfo()
 	 	getPhoto();	 
     	});
 }
-////////////////////////////////////////////////
-function getGroups()
-{
-	FB.api('me/groups', function(response)
-	{
-		var str;
-		for (var i = 0; i < response.data.length; i++) 
-		{
-			str+="<br/>Groups: " + response.data[i].name + "<br>";
-		}	  	    
-	document.getElementById("status").innerHTML+=str;
-    	});
-}
-/////////////////////////////////////////////////	
-function getEvents()
-{
-	FB.api('me/events', function(response) 
-	{
-		var str;
-		for (var i = 0; i < response.data.length; i++) 
-		{
-			str+="<br/>Events: " + response.data[i].name + "<br>";
-		}	  	    
-		document.getElementById("status").innerHTML+=str;
-	});
-}
+
 ///////////////////////////////////////////////////
 function getPhoto()
 {
