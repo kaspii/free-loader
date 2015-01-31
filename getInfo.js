@@ -11,6 +11,7 @@ function getUserInfo()
 	  	str +="<input type='button' value='Get Groups' onclick='getGroups();'/>";
 	  	str +="<input type='button' value='Get Events' onclick='getEvents();'/>";
 	  	str +="<input type='button' value='Get Notification' onclick='getNotif();'/>";
+	  	str +="<input type='button' value='Get User Events' onclick='getUserGroups();'/>";
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	document.getElementById("status").innerHTML=str;
 	 	getPhoto();	 
@@ -53,7 +54,7 @@ function getPhoto()
 }
 //////////////////////////////////////////////////
 
-function getGroupID(){
+function getUserGroups(){
 	FB.api('/me', function(response){
 		for (var i=0; i<response.data.length; i++)
 		{
