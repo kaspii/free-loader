@@ -70,7 +70,7 @@ function traceNotif(id)
 {
 	FB.api('/id', function(response)
 	{
-		console.log(response.oject);
+		console.log(response);
 		traceEvent(response.object.id);
 	});
 }
