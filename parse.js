@@ -1,5 +1,5 @@
 
-var indicator = false;
+//var indicator = false;
 function parse(indicator, text){
 var word = "free";
 
