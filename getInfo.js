@@ -6,7 +6,7 @@ function getUserInfo()
 		var str="<b>Name</b> : "+response.name+"<br>";
 	  	str +="<input type='button' value='Get Notification' onclick='getNotif();'/>";
 	  	str +="<input type='button' value='Get User Events' onclick='getUserGroups();'/>";
-	  	str +="<input type='button' value='Get Open Group Messages' onclick='getFeed(269730429771312);'/>";
+	  	str +="<input type='button' value='Events around UCLA' onclick='getFeed();'/>";
 	  	str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	document.getElementById("status").innerHTML=str;
 	 	getPhoto();	 
@@ -14,8 +14,11 @@ function getUserInfo()
 }
 //prints out messages given a groupID
 
-function getFeed(id)
+function getFeed()
 {
+	for(var a=0; a<openGroups.length;a++)
+	{
+		id=openGroups[a];
 	FB.api('/'+id+'/?fields=feed', function(response) 
 	{
 		var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE
@@ -37,6 +40,7 @@ function getFeed(id)
 				}
 		}
 		document.getElementById("status").innerHTML+=str;
+	}
 	});
 	
 }
