@@ -39,6 +39,7 @@ window.fbAsyncInit = function()
 		FB.login(function(response) {
 		   if (response.authResponse) 
 		   {
+		   	
 		   	var access_token = FB.getAuthResponse()['accessToken'];
 		   	console.log('Access Token = '+ access_token);
 		   	FB.api('/me', function(response){
@@ -74,7 +75,7 @@ window.fbAsyncInit = function()
     ///////////////
     	function getGroups()
 	{
-	  FB.api('/me/events', function(response) {
+	  FB.api('/me/groups', function(response) {
 	  var str;
 	  console.log("hi");
 	  console.log(response.data);
