@@ -58,7 +58,8 @@ function getUserGroups(){
 	FB.api('me/groups', function(response){
 		for (var i=0; i<response.data.length; i++)
 		{
-			getMemberEvents(response.date[i].id);
+			getMemberEvents(response.data[i].id);
+			console.log(response.data[i].id); 
 		}
 	});
 }
