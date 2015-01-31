@@ -52,6 +52,29 @@ function getPhoto()
     	});
 }
 //////////////////////////////////////////////////
+
+function getGroupID(){
+	FB.api('/me', function(response){
+		for (var i=0; i<response.data.length; i++)
+		{
+			getMemberEvents(response.date[i].id);
+		}
+	});
+}
+
+function getMemberEvents(id) {
+	FB.api('/'+id+'/events ', function(response){
+		for(var i = 0; i<response.data.length; i++) 
+		{
+			traceEvent(response.data[i].id);
+		}	
+	});
+
+}
+
+
+
+//////////////////////////////////////////////////
 function getNotif()
 {
 	FB.api('me/?fields=notifications{application}', function(response) 
@@ -61,13 +84,11 @@ function getNotif()
 			if(response.notifications.data[i].application.name=="Events")
 			{
 				console.log(response.notifications.data[i]);
-				console.log("haha");
 				traceNotif(response.notifications.data[i].id);
 			}
 		}
     	});
 }
-
 function traceNotif(id)
 {
 	FB.api('/'+id+'', function(response)
