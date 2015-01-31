@@ -40,8 +40,9 @@ function getFeed()
 				}
 		}
 		document.getElementById("status").innerHTML+=str;
-	}
+	
 	});
+	}
 	
 }
 ///////////////////////////////////////////////////
