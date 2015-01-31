@@ -5,11 +5,10 @@ var word = "free";
 
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
-	console.log(text[i]);
 	if (text[i] == word[0]) {
 		var j=1;
 		i++;
-		
+		console.log(text[i]);
 		// If we find it, add characters up to
 		// the length of my name to the array
 		while(j<word.length)
