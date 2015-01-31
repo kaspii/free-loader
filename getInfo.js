@@ -71,7 +71,7 @@ window.fbAsyncInit = function()
     ///////////////
     	function getGroups()
 	{
-	  FB.api('/me/groups', function(response) {
+	  FB.api('/me/events', function(response) {
 	  var str;
 	  console.log("hi");
 	  console.log(response.data);
