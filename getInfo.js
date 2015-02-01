@@ -21,7 +21,7 @@ var wordOpt={value:" "};
 function myFunction()
 {
           		wordOpt.value=document.getElementById("x").value;
-          		console.log("LOLOLOLOLLOLOLOLOLOL");
+          		//console.log("LOLOLOLOLLOLOLOLOLOL");
           		console.log(wordOpt);
           		getWorld();
  }
@@ -31,6 +31,7 @@ function getWorld(wordOpt)
 	{
 		for(var r=0;r<20;r++)
 		{
+			console.log(response.data[r].id);
 			traceEvent(response.data[r].id,"forworld");
 		}
     	});
