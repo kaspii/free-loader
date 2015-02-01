@@ -1,4 +1,4 @@
-var wordOpt={value:null};////////TODO: FEED THE SUBMIT RESULT HERE 
+//var wordOpt={value:null};////////TODO: FEED THE SUBMIT RESULT HERE 
 
 function getUserInfo() 
 {
