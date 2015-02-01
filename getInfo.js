@@ -1,4 +1,4 @@
-//var wordOpt={value:null};////////TODO: FEED THE SUBMIT RESULT HERE 
+////////TODO: FEED THE SUBMIT RESULT HERE 
 
 function getUserInfo() 
 {
@@ -17,6 +17,7 @@ function getUserInfo()
     	});
 }
 ///handles search
+var wordOpt={value:null};
 function myFunction()
 {
           		wordOpt.value=document.getElementById("wordOpt").value;
