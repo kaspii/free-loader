@@ -143,12 +143,11 @@ function traceEvent(id,domain)
 		if(indicatorMust.value == true && indicatorOpt.value== true)
 		{
 	  	/////////////////////
-	  	console.log("printed");
-	  	getCover(id,img);
-	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'>"+img.ad+"<p id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>Event Page</a> </p></div></div></div></div>";
-	  	
+	  //	console.log("printed");
+	  //	getCover(id,img);
+	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p id='vivian'></p><div class='caption'><h2><font color='black'>" +response.name+"</font></h2><p>"+response.description+"</p><p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>Event Page</a> </p></div></div></div></div>";
 		}
-		console.log(response.name);
+	//	console.log(response.name);
 		if(domain=="forya")
 		{document.getElementById("forya").innerHTML+=str;}
 		else if(domain=="forworld")
@@ -158,7 +157,7 @@ function traceEvent(id,domain)
 		
 	});
 }
-
+/*
 function getCover(id,ob)
 {
 	FB.api('/'+id+'?fields=cover', function(response)
@@ -167,7 +166,7 @@ function getCover(id,ob)
 	//	document.getElementById("vivian").innerHTML+=str;
 	})
 }
-
+*/
 
 /////I don't know what it is. Load the SDK asynchronously
  (function(d){
