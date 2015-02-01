@@ -23,11 +23,11 @@ function myFunction()
           		wordOpt.value=document.getElementById("x").value;
           		//console.log("LOLOLOLOLLOLOLOLOLOL");
           		console.log(wordOpt);
-          		getWorld();
+          		getWorld(wordOpt.value);
  }
-function getWorld(wordOpt)
+function getWorld(random)
 {
-	FB.api('/search?q='+wordOpt+'&type=event', function(response) 
+	FB.api('/search?q='+random+'&type=event', function(response) 
 	{
 		for(var r=0;r<20;r++)
 		{
