@@ -85,6 +85,11 @@ a:focus {
     color: #11505d;
 }
 
+.input-group
+{
+ padding-bottom: 10%;
+}
+
 .about_freeloader
 {
  /*margin-top: 150px;
