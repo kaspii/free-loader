@@ -27,7 +27,7 @@ function myFunction()
  }
 function getWorld(wordOpt)
 {
-	FB.api('/search?q='+wordOpt.value+'&type=event', function(response) 
+	FB.api('/search?q=tacos&type=event', function(response) 
 	{
 		for(var r=0;r<20;r++)
 		{
