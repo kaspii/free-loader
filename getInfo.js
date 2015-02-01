@@ -17,7 +17,7 @@ function getUserInfo()
     	});
 }
 ///handles search
-var wordOpt={value:null};
+var wordOpt={value:" "};
 function myFunction()
 {
           		wordOpt.value=document.getElementById("wordOpt").value;
