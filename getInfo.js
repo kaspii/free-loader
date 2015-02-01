@@ -42,7 +42,7 @@ function forYou()
 }
 function getFeed()
 {
-	wordOpt.value="";
+	wordOpt.value=" ";
 	for(var a=0; a<openGroups.length;a++)
 	{
 	id=openGroups[a];
