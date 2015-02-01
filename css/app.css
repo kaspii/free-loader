@@ -327,8 +327,8 @@ a:focus {
 
 .loginBody
 {
- padding-top: 70%;
- padding-bottom: 15%;
+ /*padding-top: 70%; */
+ padding-bottom: 75%;
 }
 
 #map {
