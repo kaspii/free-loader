@@ -31,7 +31,7 @@ function getWorld(wordOpt)
 	{
 		for(var r=0;r<20;r++)
 		{
-			console.log("sadafsfaef7777883247154815");
+			console.log(data[r].name);
 		}
     	});
 }
