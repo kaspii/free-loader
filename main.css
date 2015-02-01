@@ -20,8 +20,9 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-position: right top;
   background-size: cover;
-  background-attachment: scroll;
+  /*background-attachment: scroll;*/
 }
 
 h1
