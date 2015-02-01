@@ -83,14 +83,14 @@ a:focus {
     color: #11505d;
 }
 
-.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
-    color: #33a6cc;
-    border-color: #33a6cc;
+.btn-default {
+    color: #4682B4;
+    border-color: #4682B4;
 }
 
-.btn-primary.outline:active, .btn-primary.outline.active {
-    border-color: #007299;
-    color: #007299;
+.btn-default:active, .btn-default.active {
+    border-color: #4682B4;
+    color: #4682B4;
     box-shadow: none;
 }
 
