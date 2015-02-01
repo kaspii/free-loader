@@ -4,7 +4,7 @@ function getUserInfo()
 {
 	FB.api('/me', function(response) 
 	{
-		var str="<p>"+response.name+"</p><br>";
+		var str="<p>"+response.name+"</p>";
 	  	var str2 ="Logout";
 	  	document.getElementById("status").innerHTML=str;
 		document.getElementById("demo").innerHTML=str2;
