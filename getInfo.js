@@ -22,6 +22,7 @@ function myFunction()
           		var wordOpt=document.getElementById("wordOpt").value;
           		console.log("LOLOLOLOLLOLOLOLOLOL");
           		console.log(wordOpt);
+          		getFeed();
  }
 
 function forYou()
