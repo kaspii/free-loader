@@ -94,6 +94,11 @@ a:focus {
  color: 383838; 
 }
 
+.container img
+{
+ padding: 0;
+}
+
 .btn-default:active, .btn-default.active {
     border-color: #4682B4;
     color: #4682B4;
