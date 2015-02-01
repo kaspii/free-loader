@@ -77,21 +77,14 @@
         <li><a href="#"><p onclick="Logout()" id="demo"></p></a></li>
       </ul>
       
-       <form id= "myForm" action = "form_action.asp" class="navbar-form navbar-right" role="search">
+       <form id= "myForm" action = "form_action.asp" class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Tacos, cookies, etc. " name = "wordOpt">
+          <input type="text" class="form-control" placeholder="Tacos, cookies, etc. " >
           </nav>
         </div>
-        <button type="sumbit" input type="button" onclick = "goTo()" value="Submit form" class="btn btn-default">Submit</button>
+        <button type="button" input type="text" onclick = "goTo()" value="Submit" class="btn btn-default"></button>
       </form>
-      <scripty type = "text/javascript">
-      		function goTo()
-      		{
-      			document.getElementByID("myForm").submit;
-      			console.log(wordOpt); 
-      		}
-	
-      </scripty>
+  
     </div>
   </div>
 
