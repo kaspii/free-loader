@@ -5,34 +5,22 @@ function getUserInfo()
 	FB.api('/me', function(response) 
 	{
 		var str=""+response.name+"<br>";
-	  //	str +="<input type='button' value='Events for You' onclick='forYou();'/>";
-	  //	str +="<input type='button' value='Events around UCLA' onclick='getFeed();'/>";
-	  //	var str2 ="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	var str2 ="Logout";
 	  	document.getElementById("status").innerHTML=str;
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
 	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><h1>For You</h1><p id='forya'></p></div><div class='tab-pane' id='green'><h1>UCLA Events</h1><p id='foreveryone'></p></div></div></div>";
-	// str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	
     	});
 }
 
-//prints out messages given a groupID
-
-/*<form ... onsubmit="myButton.disabled = true; return true;">
-...
-<input type="submit" name="myButton" value="Submit">
-</form>
-*/
 
 function forYou()
 {
 	getUserGroups();
 	getNotif();
-	//document.getElementById("forya").innerHTML+="<hr>";
 }
 function getFeed()
 {
@@ -40,12 +28,10 @@ function getFeed()
 	{
 	id=openGroups[a];
 	FB.api('/'+id+'/?fields=feed', function(response) 
-//FB.api('/269730429771312/?fields=feed', function(response)
 	{
 		var str="";
 		for(var i=0; i<10; i++)
 		{
-		//	var indicator = false;
 			var indicatorMust = {value : false};
 			var indicatorOpt = {value : false};
 			for(var j=0; j<3;j++)
@@ -56,10 +42,7 @@ function getFeed()
 			var str="";
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
-				//str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  			//str+="<b>Message: </b>"+response.feed.data[i].message+"<br>";
-	  		//	str="<div class='row'><div class='col-sm-6 col-md-10'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div>";
-	  		//	str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><img src='http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg' alt='...'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
+		
 	  		str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
 	  		}
@@ -139,13 +122,9 @@ function traceEvent(id)
 		parse(indicatorOpt, response.description, wordOpt);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
 		{
-	//	str+="<b>Name</b> : "+response.name+"<br>";
-	  //	str +="<b>Description: </b>"+response.description+"<br>";
-	  	
 	  	/////////////////////
 	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div onload='getCover("+id+")'class='thumbnail'><p id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	  	///////////////////////
-	//  	getCover(id);
 		}
 		document.getElementById("forya").innerHTML+=str;
 	});
