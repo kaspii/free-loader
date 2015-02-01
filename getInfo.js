@@ -29,7 +29,7 @@ function getWorld(random)
 {
 	FB.api('/search?q='+random+'&type=event', function(response) 
 	{
-		for(var r=0;r<20;r++)
+		for(var r=0;r<7;r++)
 		{
 			console.log(response.data[r].id);
 			traceEvent(response.data[r].id,"forworld");
