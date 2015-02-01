@@ -23,9 +23,10 @@ html {
   left: 50%;
 }
 .row{
- 
-  top: 50%;
-  left: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  
 }
  
 
