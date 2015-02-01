@@ -143,10 +143,9 @@ function traceEvent(id,domain)
 		{
 	  	/////////////////////
 	  	console.log("printed");
-	  
+	  	getCover(id);
 	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>Event Page</a> </p></div></div></div></div>";
 	  	
-	  	///////////////////////<div onload='getCover("+id+")'class='thumbnail'>
 		}
 		console.log(response.name);
 		if(domain=="forya")
@@ -158,15 +157,15 @@ function traceEvent(id,domain)
 		
 	});
 }
-/*
+
 function getCover(id)
 {
 	FB.api('/'+id+'?fields=cover', function(response)
 	{
-		var str ="<img src="+response.cover.source+"alt='...'>";
+		var str ="<img src="+response.cover.source+" alt='...'>";
 		document.getElementById("vivian").innerHTML+=str;
 	})
-}*/
+}
 
 
 /////I don't know what it is. Load the SDK asynchronously
