@@ -72,9 +72,9 @@ a:focus {
     color: #11505d;
 }
 
-.about_row
+.about p
 {
- vertical-align: center; 
+ padding-bottom: 30%;
 }
 
 .fb-like
