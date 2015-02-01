@@ -31,7 +31,7 @@ function getWorld(wordOpt)
 	{
 		for(var r=0;r<20;r++)
 		{
-			console.log(data[r].name);
+			console.log(response.data[r].name);
 		}
     	});
 }
