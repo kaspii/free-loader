@@ -149,7 +149,7 @@ function traceEvent(id,domain)
 		document.getElementById(domain).innerHTML+=str;
 	});
 }
-
+/*
 function getCover(id)
 {
 	FB.api('/'+id+'?fields=cover', function(response)
@@ -157,7 +157,7 @@ function getCover(id)
 		var str ="<img src="+response.cover.source+"alt='...'>";
 		document.getElementById("vivian").innerHTML+=str;
 	})
-}
+}*/
 
 
 /////I don't know what it is. Load the SDK asynchronously
