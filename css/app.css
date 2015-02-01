@@ -467,24 +467,6 @@ body {
   position: relative;
  padding: 0x; 
 }
-#video-container {
-    position: absolute;
-}
-#video-container {
-    top:0%;
-    left:0%;
-    height:100%;
-    width:100%;
-    overflow: hidden;
-}
-video {
-    position:absolute;
-    z-index:0;
-}
-video.fillWidth {
-    width: 100%;
-}
-
 
 /* for footer */
 .setContact {
@@ -493,9 +475,9 @@ video.fillWidth {
 }
 
 /* for people section */
-
+/*
 .panel {
-    background-color: #6CAD3C; /*68A9E8*/
+    background-color: #6CAD3C; 
     border-bottom: 2px solid #ccf1ff;
 }
 
@@ -547,4 +529,4 @@ video.fillWidth {
 }
 .dropdown-menu>.active>a {
 background-color: rgba(255,255,255,.3);
-}
+} */
