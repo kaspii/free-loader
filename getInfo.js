@@ -7,7 +7,8 @@ function getUserInfo()
 		var str="<b>Name</b> : "+response.name+"<br>";
 	  	str +="<input type='button' value='Events for You' onclick='forYou();'/>";
 	  	str +="<input type='button' value='Events around UCLA' onclick='getFeed();'/>";
-	  	var str2 ="<input type='button' value='Logout' onclick='Logout();'/>";
+	  //	var str2 ="<input type='button' value='Logout' onclick='Logout();'/>";
+	  	var str2 ="Logout";
 	  	document.getElementById("status").innerHTML=str;
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
