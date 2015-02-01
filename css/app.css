@@ -112,7 +112,7 @@ a:focus {
 
 .about_freeloader
 {
- /*margin-top: 150px;
+ margin-top: 150px; /*
  margin-bottom: 150px;*/
  /*padding-top: 30%;
  padding-bottom:30%;*/
@@ -120,8 +120,8 @@ a:focus {
 
 .about_us
 {
- /*margin-top: 150px;
- margin-bottom: 150px;*/
+ margin-top: 150px;
+ /*margin-bottom: 150px;*/
  /*padding-top: 30%;
  padding-bottom:30%;*/
 }
