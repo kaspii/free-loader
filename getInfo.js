@@ -136,8 +136,12 @@ function traceEvent(id)
 		parse(indicatorOpt, response.description, wordOpt);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
 		{
-		str+="<b>Name</b> : "+response.name+"<br>";
-	  	str +="<b>Description: </b>"+response.description+"<br>";	
+	//	str+="<b>Name</b> : "+response.name+"<br>";
+	  //	str +="<b>Description: </b>"+response.description+"<br>";
+	  	
+	  	/////////////////////
+	  	str= "<div class='row'><div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg' alt='...'><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
+	  	///////////////////////
 		}
 		document.getElementById("forya").innerHTML+=str;
 	});
