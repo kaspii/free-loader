@@ -150,9 +150,10 @@ function traceEvent(id)
 function getCover(id)
 {
 	FB.api('/'+id+'?fields=cover', function(response)
+	{
 		var str ="<img src="+response.source+"alt='...'>";
 		document.getElementById("vivian").innerHTML+=str;
-	)
+	})
 }
 /////I don't know what it is. Load the SDK asynchronously
  (function(d){
