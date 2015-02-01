@@ -72,10 +72,16 @@ a:focus {
     color: #11505d;
 }
 
-.about p
+.about_freeloader
 {
- padding-bottom: 50%;
- padding-top: 50%;
+ padding-top:50%;
+ padding-bottom:50%;
+}
+
+.about_us
+{
+ padding-top:50%;
+ padding-bottom:50%;
 }
 
 .fb-like
