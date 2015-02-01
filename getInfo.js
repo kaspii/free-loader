@@ -45,7 +45,7 @@ function getFeed()
 			{
 		
 	  	//	str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
-	  		str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><font size="6"><b>Group: " +response.feed.data[i].to.data[0].name+"<\b></font><br><p>Message: "+response.feed.data[i].message+"</p><p><a href="+ response.feed.data[i].actions[0].link +" class='btn btn-default btn-lg' role='button'>Original Post</a></p></div></div></div></div>";
+	  		str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><font size='6'><b>Group: " +response.feed.data[i].to.data[0].name+"<\b></font><br><p>Message: "+response.feed.data[i].message+"</p><p><a href="+ response.feed.data[i].actions[0].link +" class='btn btn-default btn-lg' role='button'>Original Post</a></p></div></div></div></div>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
 	  		}
 		}
