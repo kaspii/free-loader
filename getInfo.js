@@ -139,7 +139,7 @@ function traceEvent(id)
 	  //	str +="<b>Description: </b>"+response.description+"<br>";
 	  	
 	  	/////////////////////
-	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p onload='getCover()' id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
+	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p onload='getCover("+id+")' id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	  	///////////////////////
 	//  	getCover(id);
 		}
