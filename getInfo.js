@@ -61,8 +61,8 @@ function getFeed()
 	  			var str="<b>Message: </b>"+response.feed.data[i].message+"<br>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
 	  					}
-			//document.getElementById("foreveryone").innerHTML+=str;
-			document.getElementById("status").innerHTML+=str;
+			document.getElementById("foreveryone").innerHTML+=str;
+		//	document.getElementById("status").innerHTML+=str;
 		}
 	
 	
