@@ -15,9 +15,7 @@ function getUserInfo()
 	 	
     	});
 }
-$("demo").on('click', function(){
-	Logout();
-})
+
 //prints out messages given a groupID
 
 /*<form ... onsubmit="myButton.disabled = true; return true;">
