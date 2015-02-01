@@ -187,7 +187,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-      background-position: right top;
+      background-position: center top;
         height: 690px;
 
 }
