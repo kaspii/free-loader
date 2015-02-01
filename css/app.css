@@ -88,11 +88,6 @@ a:focus {
     border-color: #4682B4;
 }
 
-.about h2, p
-{
- padding: 0px;
-}
-
 .container2 p
 {
  padding: 0;
@@ -117,7 +112,9 @@ a:focus {
 
 .about_freeloader
 {
- margin-top: 150px; /*
+ margin-top: 150px;
+ margin-bottom: 0px;
+ /*
  margin-bottom: 150px;*/
  /*padding-top: 30%;
  padding-bottom:30%;*/
