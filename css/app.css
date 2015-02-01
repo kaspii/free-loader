@@ -181,7 +181,7 @@ a:focus {
 .reel-life
 {
     font-style: "calibri light", verdana, sans-serif; 
-    letter-spacing: 3%;
+    /*letter-spacing: 3%; */
     text-transform: uppercase;
     text-shadow: 1px 1px #a8a8a8
 }
