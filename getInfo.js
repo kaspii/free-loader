@@ -23,7 +23,7 @@ function myFunction()
           		wordOpt.value=document.getElementById("x").value;
           		console.log("LOLOLOLOLLOLOLOLOLOL");
           		console.log(wordOpt);
-          		getFeed();
+          		getWorld();
  }
 function getWorld(wordOpt)
 {
