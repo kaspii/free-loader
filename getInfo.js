@@ -30,8 +30,9 @@ function getWorld()
 		{
 			console.log(response.data[r].id);
 			traceEvent(response.data[r].id,"forworld");
-		}
+		{
     	});
+    	
 }
 function forYou()
 {
@@ -151,7 +152,10 @@ function traceEvent(id,domain)
 		if(domain=="forya")
 		{document.getElementById("forya").innerHTML+=str;}
 		else if(domain=="forworld")
-		{document.getElementById("forworld").innerHTML+=str;}
+		{console.log("PLEASE WORK!");
+		document.getElementById("forworld").innerHTML+=str;}
+		
+		
 	});
 }
 /*
