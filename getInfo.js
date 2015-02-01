@@ -10,24 +10,21 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
-	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#green' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
+	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#green' onclick='forYou()' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
 	 	
     	});
 }
 ///handles search
+function myfunction(){}
+
 var wordOpt={value:" "};
-function myFunction()
-{
-          		wordOpt.value=document.getElementById("x").value;
-          		//console.log("LOLOLOLOLLOLOLOLOLOL");
-          		console.log(wordOpt);
-          		getWorld(wordOpt.value);
- }
-function getWorld(random)
-{
-	FB.api('/search?q='+random+'&type=event', function(response) 
+
+function getWorld()
+{	
+	wordOpt.value=document.getElementById("x").value;
+	FB.api('/search?q='+wordOpt.value+'&type=event', function(response) 
 	{
 		for(var r=0;r<7;r++)
 		{
