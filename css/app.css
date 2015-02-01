@@ -88,6 +88,11 @@ a:focus {
     border-color: #4682B4;
 }
 
+.about h2, p
+{
+ padding: 0px;
+}
+
 .container2 p
 {
  padding: 0;
