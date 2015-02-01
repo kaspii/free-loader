@@ -54,15 +54,11 @@ function getFeed()
 			var str="";
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
-			//	var str="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-			//	var str="<b>Message: </b>"+response.feed.data[i].message+"<br>";
 				str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  			//document.getElementById("foreveryone").innerHTML+=str;
+	  		
 	  			str+="<b>Message: </b>"+response.feed.data[i].message+"<br>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
 	  					}
-		//	document.getElementById("foreveryone").innerHTML+=str;
-		//	document.getElementById("status").innerHTML+=str;
 		}
 	
 	
