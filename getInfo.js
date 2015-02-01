@@ -54,11 +54,11 @@ function getFeed()
 			var str="";
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
-				str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
-	  		
-	  			str+="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+				//str+="<b>Group Name</b> : "+response.feed.data[i].to.data[0].name+"<br>";
+	  			//str+="<b>Message: </b>"+response.feed.data[i].message+"<br>";
+	  			str="<div class='row'><div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg' alt='...'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
-	  					}
+	  		}
 		}
 	
 	
