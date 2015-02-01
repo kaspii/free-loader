@@ -30,7 +30,7 @@ function getWorld()
 		{
 			console.log(response.data[r].id);
 			traceEvent(response.data[r].id,"forworld");
-		
+		}	
     	});
     	
 }
