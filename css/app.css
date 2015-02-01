@@ -72,6 +72,11 @@ a:focus {
     color: #11505d;
 }
 
+.fb-like
+{
+ text-align: right;
+}
+
 .light {
     font-weight: 400;
 }
