@@ -10,7 +10,7 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
-	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs' data-tabs='tabs'><li class='active'><a href='#red' onload='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><h1>For You</h1><p id='forya'></p></div><div class='tab-pane' id='green'><h1>UCLA Events</h1><p id='foreveryone'></p></div></div></div>";
+	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><h1>For You</h1><p id='forya'></p></div><div class='tab-pane' id='green'><h1>UCLA Events</h1><p id='foreveryone'></p></div></div></div>";
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	
     	});
