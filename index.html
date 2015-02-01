@@ -77,17 +77,22 @@
         <li><a href="#"><p onclick="Logout()" id="demo"></p></a></li>
       </ul>
       
-       <form id= "myForm" action = '#' method="post" class="navbar-form navbar-right">
+       <form id= "myForm" class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" name = "wordOpt" id = "text" class="form-control" placeholder="Tacos, cookies, etc. " >
-          </nav>
+          <input type="text" id = "wordOpt" class="form-control" value ='food' placeholder="Tacos, cookies, etc. " >
         </div>
-        <button type="button" input type="submit" value="submit" class="btn btn-default"></button>
+        <button onclick="myFunction()" class="btn btn-default">submit</button>
       </form>
-  
+  	</nav>
     </div>
   </div>
-
+<script>
+          	function myFunction(){
+          		var x=document.getElementById("wordOpt").value;
+          		console.log("LOLOLOLOLLOLOLOLOLOL");
+          		console.log(x);
+          	}
+          </script>
 
 </body>
 
