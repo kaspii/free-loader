@@ -74,14 +74,14 @@ a:focus {
 
 .about_freeloader
 {
- padding-top:50%;
- padding-bottom:50%;
+ margin-top: 150px;
+ margin-bottom: 150px;
 }
 
 .about_us
 {
- padding-top:50%;
- padding-bottom:50%;
+ margin-top: 150px;
+ margin-bottom: 150px;
 }
 
 .fb-like
