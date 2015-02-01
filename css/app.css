@@ -346,8 +346,8 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
-    padding-bottom: 5%;
+    /*padding-top: 100px;
+    padding-bottom: 5%;*/
     background-color: #383838;  /*TACO #68A9E8*/
 }
 
