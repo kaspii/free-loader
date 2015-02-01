@@ -44,7 +44,7 @@ function getFeed()
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
 		
-	  		str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
+	  		str="<div class='row'><div class='col-sm-2 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
 	  		}
 		}
