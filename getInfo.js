@@ -26,7 +26,7 @@ function getWorld()
 	wordOpt.value=document.getElementById("x").value;
 	FB.api('/search?q='+wordOpt.value+'&type=event', function(response) 
 	{
-		for(var r=0;r<7;r++)
+		for(var r=0;r<50;r++)
 		{
 			console.log(response.data[r].id);
 			traceEvent(response.data[r].id,"forworld");
