@@ -151,7 +151,7 @@ function getCover(id)
 {
 	FB.api('/'+id+'?fields=cover', function(response)
 	{
-		var str ="<img src="+response.source+"alt='...'>";
+		var str ="<img src="+response.cover.source+"alt='...'>";
 		document.getElementById("vivian").innerHTML+=str;
 	})
 }
