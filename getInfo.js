@@ -4,7 +4,7 @@ function getUserInfo()
 {
 	FB.api('/me', function(response) 
 	{
-		var str="<b>Name</b> : "+response.name+"<br>";
+		var str=""+response.name+"<br>";
 	  //	str +="<input type='button' value='Events for You' onclick='forYou();'/>";
 	  //	str +="<input type='button' value='Events around UCLA' onclick='getFeed();'/>";
 	  //	var str2 ="<input type='button' value='Logout' onclick='Logout();'/>";
@@ -71,7 +71,7 @@ function getPhoto()
 {
 	FB.api('/me/picture?type=normal', function(response) 
 	{
-		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
+		  var str="<br/><img src='"+response.data.url+"'/>";
 	  	  document.getElementById("status").innerHTML+=str;
     	});
 }
@@ -155,6 +155,8 @@ function getCover(id)
 		document.getElementById("vivian").innerHTML+=str;
 	})
 }
+
+
 /////I don't know what it is. Load the SDK asynchronously
  (function(d){
      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
