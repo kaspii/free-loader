@@ -13,7 +13,8 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
-	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><h1>For You</h1><p id='forya'></p></div><div class='tab-pane' id='green'><h1>UCLA Events</h1><p id='foreveryone'></p></div></div></div>";
+	 //	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><h1>For You</h1><p id='forya'></p></div><div class='tab-pane' id='green'><h1>UCLA Events</h1><p id='foreveryone'></p></div></div></div>";
+	 str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	
     	});
