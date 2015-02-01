@@ -20,7 +20,7 @@ function getUserInfo()
 var wordOpt={value:" "};
 function myFunction()
 {
-          		wordOpt.value=document.getElementById("wordOpt").value;
+          		wordOpt.value=document.getElementById("x").value;
           		console.log("LOLOLOLOLLOLOLOLOLOL");
           		console.log(wordOpt);
           		getFeed();
