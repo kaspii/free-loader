@@ -28,15 +28,6 @@ html {
     margin-right: auto;
 }
 
-/*footer
-{
- background-color: 383838;
-}*/
-
-html
-{
- background-color: 383838;
-}
 
 h1,
 h3,
@@ -438,7 +429,7 @@ ul.banner-social-buttons {
 
 footer {
     padding: 50px 0;
-    background-color: #001F3F;
+    background-color: 383838;
 }
 
 footer p {
