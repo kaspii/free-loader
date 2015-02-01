@@ -29,7 +29,7 @@ function getWorld(wordOpt)
 {
 	FB.api('/search?q=wordOpt.value&type=event', function(response) 
 	{
-		for(int r=0;r<20;r++)
+		for(var r=0;r<20;r++)
 		{
 			console.log("sadafsfaef7777883247154815");
 		}
