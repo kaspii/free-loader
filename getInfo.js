@@ -32,7 +32,7 @@ function forYou()
 {
 	getUserGroups();
 	getNotif();
-	//document.getElementById("forya").innerHTML+="<hr>";
+	document.getElementById("forya").innerHTML+="<hr>";
 }
 function getFeed()
 {
