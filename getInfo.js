@@ -148,7 +148,10 @@ function traceEvent(id,domain)
 	  	///////////////////////<div onload='getCover("+id+")'class='thumbnail'>
 		}
 		console.log(response.name);
-		document.getElementById(domain).innerHTML+=str;
+		if(domain=="forya")
+		{document.getElementById("forya").innerHTML+=str;}
+		else if(domain=="forworld")
+		{document.getElementById("forworld").innerHTML+=str;}
 	});
 }
 /*
