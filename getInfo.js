@@ -10,7 +10,7 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
-	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'>hahahahha</p></div></div></div>";
+	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
 	 	
@@ -144,8 +144,8 @@ function traceEvent(id,domain)
 	  	/////////////////////
 	  	console.log("printed");
 	  
-	  	//str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> </p></div></div></div></div>";
-	  	str="why is nothing working?";
+	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p id='vivian'></p><div class='caption'><h3>" +response.name+"</h3><p>"+response.description+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> </p></div></div></div></div>";
+	  	
 	  	///////////////////////<div onload='getCover("+id+")'class='thumbnail'>
 		}
 		console.log(response.name);
