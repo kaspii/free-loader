@@ -16,7 +16,13 @@ function getUserInfo()
 	 	
     	});
 }
-
+document.getElementById("myform").onsubmit = function(event){
+    //var link = document.getElementById("mylink");
+    var textField = document.getElementById("text");
+    //link.href = textField.value;
+     console.log("hi!!!!!!!!");
+     event.preventDefault();
+};
 
 function forYou()
 {
