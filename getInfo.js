@@ -10,7 +10,7 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
-	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
+	 	var strtab="<div id='content'><ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#green' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
 	 	forYou();
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	
@@ -25,13 +25,13 @@ function myFunction()
           		console.log(wordOpt);
           		getFeed();
  }
-function getWorld(wordOpt.value)
+function getWorld(wordOpt)
 {
 	FB.api('/search?q=wordOpt.value&type=event', function(response) 
 	{
 		for(int r=0;r<20;r++)
 		{
-			traceEvent(response.data[r].id);
+			console.log("sadafsfaef7777883247154815");
 		}
     	});
 }
