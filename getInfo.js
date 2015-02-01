@@ -1,4 +1,4 @@
-var wordOpt=" ";////////TODO: FEED THE SUBMIT RESULT HERE 
+var wordOpt={value:null};////////TODO: FEED THE SUBMIT RESULT HERE 
 
 function getUserInfo() 
 {
@@ -19,12 +19,21 @@ function getUserInfo()
 ///handles search
 function myFunction()
 {
-          		var wordOpt=document.getElementById("wordOpt").value;
+          		wordOpt.value=document.getElementById("wordOpt").value;
           		console.log("LOLOLOLOLLOLOLOLOLOL");
           		console.log(wordOpt);
           		getFeed();
  }
-
+function getWorld(wordOpt.value)
+{
+	FB.api('/search?q=wordOpt.value&type=event', function(response) 
+	{
+		for(int r=0;r<20;r++)
+		{
+			traceEvent(response.data[r].id);
+		}
+    	});
+}
 function forYou()
 {
 	getUserGroups();
@@ -32,6 +41,7 @@ function forYou()
 }
 function getFeed()
 {
+	wordOpt.value="";
 	for(var a=0; a<openGroups.length;a++)
 	{
 	id=openGroups[a];
@@ -46,7 +56,7 @@ function getFeed()
 			{
 				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
 			}
-			parse(indicatorOpt,response.feed.data[i].message,wordOpt);
+			parse(indicatorOpt,response.feed.data[i].message,wordOpt.value);
 			var str="";
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
@@ -128,7 +138,7 @@ function traceEvent(id)
 		{
 			parse(indicatorMust, response.description, wordMusthave[j]);
 		}
-		parse(indicatorOpt, response.description, wordOpt);
+		parse(indicatorOpt, response.description, wordOpt.value);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
 		{
 	  	/////////////////////
