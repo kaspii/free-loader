@@ -1,6 +1,6 @@
 # free-loader
 
-Currently Hosting by Github:
+Currently hosted by Github:
 
 Old tester:
 
