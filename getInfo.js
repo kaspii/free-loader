@@ -10,7 +10,15 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
-	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'><li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li><li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li><li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li></ul><div id='my-tab-content' class='tab-content'><div class='tab-pane active' id='red'><br><br><p id='forya'></p></div><div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div><div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
+	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
+	 	+"<li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li>"
+	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
+	 	+"<li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li>"
+	 	+"</ul><div id='my-tab-content' class='tab-content'>"
+	 	+"<div class='tab-pane active' id='red'><br><br><p id='forya'></p></div>"
+	 	+"<div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div>"
+	 	+"<div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
+	 	
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
 	 	
@@ -60,9 +68,12 @@ function getFeed()
 			var str="";
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
-		
-	  	//	str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h3>" +response.feed.data[i].to.data[0].name+"</h3><p>"+response.feed.data[i].message+"</p><p><a href='#' class='btn btn-primary' role='button'>Button</a> <a href='#' class='btn btn-default' role='button'>Button</a></p></div></div></div></div>";
-	  		str="<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><div class='caption'><h2><font color='black'>Group: " +response.feed.data[i].to.data[0].name+"</font></h2><br><p>Message: "+response.feed.data[i].message+"</p><p><a href="+ response.feed.data[i].actions[0].link +" class='btn btn-default btn-lg' role='button'>Original Post</a></p></div></div></div></div>";
+	  		str="<div class='row'><div class='col-sm-6 col-md-10'>"
+	  		+"<div class='thumbnail'><div class='caption'>"
+	  		+"<h2><font color='black'>Group: " +response.feed.data[i].to.data[0].name+"</font></h2><br>"
+	  		+"<p>Message: "+response.feed.data[i].message+"</p>"
+	  		+"<p><a href="+ response.feed.data[i].actions[0].link 
+	  		+" class='btn btn-default btn-lg' role='button'>Original Post</a></p></div></div></div></div>";
 	  			document.getElementById("foreveryone").innerHTML+=str;
 	  		}
 		}
@@ -145,7 +156,12 @@ function traceEvent(id,domain)
 	  	/////////////////////
 	  //	console.log("printed");
 	  //	getCover(id,img);
-	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'><p id='vivian'></p><div class='caption'><h2><font color='black'>" +response.name+"</font></h2><p>"+response.description+"</p><p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>Event Page</a> </p></div></div></div></div>";
+	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'>"
+	  	+"<p id='vivian'></p><div class='caption'>"
+	  	+"<h2><font color='black'>" +response.name+"</font></h2>"
+	  	+"<p>"+response.description+"</p>"
+	  	+"<p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>"
+	  	+"Event Page</a> </p></div></div></div></div>";
 		}
 	//	console.log(response.name);
 		if(domain=="forya")
