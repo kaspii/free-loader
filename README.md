@@ -1,4 +1,5 @@
 # free-loader
 
-On Github:
-http://kaspii.github.io/free-loader/
+Currently Hosting by Github:
+Old tester: http://kaspii.github.io/free-loader/
+New: http://kaspii.github.io/free-loader/newIndex.html#1
