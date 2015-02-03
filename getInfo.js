@@ -16,22 +16,13 @@ function getUserInfo()
 	 //	+"<li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li>"
 	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" ///another function?
 	 	+"<form id= 'myForm'><div class='form-group'>"
-	 	+"<input type='text' id = 'x' class='form-control' placeholder='Free ___ around the world..' >"
+	 	+"<input type='text' id = 'input' class='form-control' placeholder='Events Around the world..' >"
 	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button></form>"
 	 	+"</a></li>"
 	 	+"</ul><div id='my-tab-content' class='tab-content'>"
 	 	+"<div class='tab-pane active' id='red'><br><br><p id='forya'></p></div>"
 	 	+"<div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div>"
 	 	+"<div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
-	 	
-	 	
-	 	/*
-       "<form id= "myForm">"
-        <div class="form-group">
-          <input type="text" id = "wordOpt" class="form-control" placeholder="Search for free ___ around the world.." >
-        </div>
-        <button onclick="myFunction()" class="btn btn-default">submit</button>
-      </form>*/
 	 	
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
@@ -42,15 +33,15 @@ function getUserInfo()
 function myfunction(){}
 
 function noInput() {
-	var str = "Search forthe free stuff in the search bar" 
+	var str = "Search for free stuff in the search bar" 
 	document.getElementById("forworld").innerHTML=str;
 }
 var wordOpt={value:" "};
 
 function getWorld()
 {	
-	wordOpt.value=document.getElementById("x").value;
-	console.log(document.getElementById("x").value);
+	wordOpt.value=document.getElementById("input").value;
+	console.log(document.getElementById("input").value);
 	FB.api('/search?q='+wordOpt.value+'&type=event', function(response) 
 	{
 		for(var r=0;r<50;r++)
