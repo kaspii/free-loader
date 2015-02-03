@@ -6,7 +6,7 @@ Currently hosted by Github:
 <h4>Old tester:</h4>
 http://kaspii.github.io/free-loader/
 
-<h3>New:</h3> 
+<h5>New:</h5> 
 http://kaspii.github.io/free-loader/newIndex.html#1
 
 
