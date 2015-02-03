@@ -13,8 +13,7 @@ function getUserInfo()
 	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
 	 	+"<li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li>"
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
-	 //	+"<li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li>"
-	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" ///another function?
+	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
 	 	+"<form id= 'myForm'><div class='form-group'>"
 	 	+"<input type='text' id = 'input' class='form-control' placeholder='Events Around the world..' >"
 	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button></form>"
@@ -30,7 +29,6 @@ function getUserInfo()
     	});
 }
 ///handles search
-function myfunction(){}
 
 function noInput() {
 	var str = "Search for free stuff in the search bar" 
