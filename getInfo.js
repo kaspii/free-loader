@@ -46,7 +46,7 @@ var wordOpt={value:" "};
 function getWorld()
 {	
 	wordOpt.value=document.getElementById("x").value;
-	consold.log(wordOpt.value);
+	console.log(wordOpt.value);
 	FB.api('/search?q='+wordOpt.value+'&type=event', function(response) 
 	{
 		for(var r=0;r<50;r++)
