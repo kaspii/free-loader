@@ -3,7 +3,7 @@
 <h2>View website</h2>
 Currently hosted by Github:
 
-<h3>Old tester:</h3>
+<h4>Old tester:</h4>
 http://kaspii.github.io/free-loader/
 
 <h3>New:</h3> 
