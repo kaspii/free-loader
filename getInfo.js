@@ -15,9 +15,18 @@ function getUserInfo()
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
 	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
 	 	+"<form id= 'myForm'><div class='form-group'>"
+	 	/*
 	 	+"<input type='text' id = 'input' class='form-control' placeholder='Events Around the world..' >"
 	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button></form>"
-	 	+"</a></li>"
+	 	*/
+	 	
+	 	+"<div class='row'><div class='col-lg-6'><div class='input-group'>"
+      		+"<span class='input-group-btn'>"+
+		+"<button class='btn btn-default' type='button' onclick='getWorld()'>Go!</button></span>"
+      		+"<input type='text'  id = 'input' class='form-control' placeholder='Events Around the world..'>"
+    		+"</div></div></div></div>"
+	 	
+	 	+"</form></a></li>"
 	 	+"</ul><div id='my-tab-content' class='tab-content'>"
 	 	+"<div class='tab-pane active' id='red'><br><br><p id='forya'></p></div>"
 	 	+"<div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div>"
@@ -25,6 +34,16 @@ function getUserInfo()
 	 	
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
+	 	
+	 	/*
+	 	+"<div class='row'>"
+  +"<div class='col-lg-6'>"
+    +"<div class='input-group'>"
+      +"<span class='input-group-btn'>"+
+        +"<button class='btn btn-default' type='button'>Go!</button></span>"
+      +"<input type='text' class='form-control' placeholder='Search for...'>"
+    +"</div></div></div>"
+	 	*/
 	 	
     	});
 }
