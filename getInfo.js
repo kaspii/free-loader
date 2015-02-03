@@ -21,9 +21,9 @@ function getUserInfo()
 	 	*/
 	 	
 	 	+"<div class='row'><div class='col-lg-6'><div class='input-group'>"
-      		+"<span class='input-group-btn'>"+
-      		+"<input type='text'  id = 'input' class='form-control' placeholder='Events Around the world..'>"
+      		+"<span class='input-group-btn'>"
 		+"</div><button class='btn btn-default' type='button' onclick='getWorld()'>Go!</button></span>"
+		+"<input type='text'  id = 'input' class='form-control' placeholder='Events Around the world..'>"
     		+"</div></div></div>"
 	 	
 	 	+"</form></a></li>"
