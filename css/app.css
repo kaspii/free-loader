@@ -13,7 +13,7 @@ body {
     overflow-x:hidden;
 }
 #search_res{
-    position: absolute;
+    position: relative;
     top:30px;
 } 
 
