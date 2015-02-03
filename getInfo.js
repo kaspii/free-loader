@@ -16,7 +16,7 @@ function getUserInfo()
 	 //	+"<li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li>"
 	 	+"<li><a href='#yellow' data-toggle='tab'>" ///another function?
 	 	+"<form id= 'myForm'><div class='form-group'>"
-	 	+"<input type='text' id = 'x' class='form-control' placeholder='Search for free ___ around the world..' >"
+	 	+"<input type='text' id = 'x' class='form-control' placeholder='Free ___ around the world..' >"
 	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button></form>"
 	 	+"</a></li>"
 	 	+"</ul><div id='my-tab-content' class='tab-content'>"
