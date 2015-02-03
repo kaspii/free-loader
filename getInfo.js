@@ -15,17 +15,8 @@ function getUserInfo()
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
 	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
 	 	+"<form id= 'myForm'><div class='form-group'>"
-	 	/*
 	 	+"<input type='text' id = 'input' class='form-control' placeholder='Events Around the world..' >"
-	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button></form>"
-	 	*/
-	 	
-	 	+"<div class='row'><div class='col-lg-6'><div class='input-group'>"
-      		+"<span class='input-group-btn'>"
-		+"</div><button class='btn btn-default' type='button' onclick='getWorld()'>Go!</button></span>"
-		+"<input type='text'  id = 'input' class='form-control' placeholder='Events Around the world..'>"
-    		+"</div></div></div>"
-	 	
+	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button>"
 	 	+"</form></a></li>"
 	 	+"</ul><div id='my-tab-content' class='tab-content'>"
 	 	+"<div class='tab-pane active' id='red'><br><br><p id='forya'></p></div>"
