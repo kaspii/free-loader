@@ -1,6 +1,6 @@
 # free-loader
 
-<h1>View website</h1>
+<h2>View website</h2>
 Currently hosted by Github:
 
 <h3>Old tester:</h3>
@@ -10,9 +10,10 @@ http://kaspii.github.io/free-loader/
 http://kaspii.github.io/free-loader/newIndex.html#1
 
 
-<h1>Notes on color schemes</h1>
-<h2>In case we decide to change what we have</h2>
-
+<header>
+  <h2>Notes on color schemes</h2>
+  <p>In case we decide to change what we have</p>
+</header>
 BLUE: 68A9E8
 
 ORIGINAL GREEN: 6CAD3C
