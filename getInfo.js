@@ -14,7 +14,7 @@ function getUserInfo()
 	 	+"<li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li>"
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
 	 //	+"<li><a href='#yellow' onclick='getWorld()' data-toggle='tab'>Events around the world</a></li>"
-	 	+"<li><a href='#yellow' data-toggle='tab'>" ///another function?
+	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" ///another function?
 	 	+"<form id= 'myForm'><div class='form-group'>"
 	 	+"<input type='text' id = 'x' class='form-control' placeholder='Free ___ around the world..' >"
 	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button></form>"
@@ -41,12 +41,16 @@ function getUserInfo()
 ///handles search
 function myfunction(){}
 
+function noInput() {
+	var str = "Search forthe free stuff in the search bar" 
+	document.getElementById("forworld").innerHTML=strtab;
+}
 var wordOpt={value:" "};
 
 function getWorld()
 {	
 	wordOpt.value=document.getElementById("x").value;
-	console.log(wordOpt.value);
+	console.log(document.getElementById("x").value);
 	FB.api('/search?q='+wordOpt.value+'&type=event', function(response) 
 	{
 		for(var r=0;r<50;r++)
