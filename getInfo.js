@@ -43,7 +43,7 @@ function myfunction(){}
 
 function noInput() {
 	var str = "Search forthe free stuff in the search bar" 
-	document.getElementById("forworld").innerHTML=strtab;
+	document.getElementById("forworld").innerHTML=str;
 }
 var wordOpt={value:" "};
 
