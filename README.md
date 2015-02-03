@@ -6,14 +6,15 @@ Currently hosted by Github:
 <h4>Old tester:</h4>
 http://kaspii.github.io/free-loader/
 
-<h5>New:</h5> 
+<h4>New index:</h4> 
 http://kaspii.github.io/free-loader/newIndex.html#1
 
 
 <header>
   <h2>Notes on color schemes</h2>
-  <p>In case we decide to change what we have</p>
+  <h4>In case we decide to change what we have</h4>
 </header>
+
 BLUE: 68A9E8
 
 ORIGINAL GREEN: 6CAD3C
@@ -28,7 +29,7 @@ GRAYS
 DARK BLUE TO MATCH FB: 394FA7
 4682B4
 
-!!!!!!! COLORS FOR BACKGROUND OF SECTIONS!!!!!!
+<h4>Colors for background of sections!!!</h4>
 content-section
 body
 
